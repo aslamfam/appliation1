@@ -3,7 +3,7 @@
 $version=$BUILD_ID
 
 
-docker build -t apprepo:$version
+docker build -t apprepo:$version .
 
 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 898852898285.dkr.ecr.us-east-2.amazonaws.com
 
